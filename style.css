@@ -74,7 +74,7 @@ button:hover {
     box-shadow: 4px 4px 10px grey;
 }
 
-.cadastro-02{
+.cadastro-02 {
     display: flex;
     justify-content: space-between;
     margin: auto;

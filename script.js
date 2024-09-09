@@ -55,6 +55,7 @@ function editarCliente(linha) {
 // Função para excluir um cliente
 function excluirCliente(linha) {
     linha.remove();
+    window.location.reload();
 }
 
 // Evento para o formulário de cadastro
@@ -67,7 +68,6 @@ document.getElementById('clienteForm').addEventListener('submit', function(event
     const celular = document.getElementById('celular').value;
     const cidade = document.getElementById('cidade').value;
 
-    
     adicionarClienteNaTabela(nome, email, celular, cidade);
 
     document.getElementById('clienteForm').reset();
