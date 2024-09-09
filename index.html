@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Cadastrar</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./img/user-regular.svg">
 </head>
@@ -14,6 +14,29 @@
     <div class="conteudo-principal">
         <h1 class="texto-principal">Cadastro de Clientes</h1>
     </div>
+    <section class="cadastro-01">  
+        <button id="cadastrarClienteBtn" class="cadastro-02">Cadastrar Cliente</button>
+
+
+        <div id="formularioCadastro" class="form-card" style="display: none;">
+            <h2>Novo cliente</h2>
+            <form id="clienteForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="celular">Celular:</label>
+                <input type="tel" id="celular" name="celular" required><br>
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required><br>
+
+                <button type="submit">Salvar</button>
+                <button type="button" id="cancelarCadastro">Cancelar</button>
+            </form>
+        </div>
 
         <table>
             <thead>
@@ -29,11 +52,16 @@
                     <td>lucasteste@gmai.com</td>
                     <td>13997630601</td>
                     <td>Peruíbe</td>
-                    <td><button>Editar</button></td>
-                    <td><butto>Excluir</butto></td>
+                    <td class="action-buttons">
+                        <button>Editar</button>
+                        <button>Excluir</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
+    </section>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
