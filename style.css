@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --fonte-primaria: "Poppins", sans-serif;
+    --azul-mais-usado: #367AF7;
+    --azul-seg
+}
+
 body, html {
     background-color: #f8f9fa;
     margin: 0;
@@ -14,6 +22,8 @@ body, html {
 
 h1 {
     margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 650;
 }
 
 table {
@@ -27,6 +37,7 @@ th, td {
     padding: 12px;
     border-bottom: 1px solid #ddd;
     text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 
 th {
@@ -61,6 +72,7 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    font-family: "Poppins", sans-serif;
 }
 
 button:hover {
@@ -83,6 +95,7 @@ button:hover {
     justify-content: space-between;
     margin: auto;
     flex-direction: row;
+    font-family: "Poppins", sans-serif;
 }
 
 .form-card {
@@ -98,6 +111,7 @@ button:hover {
 label {
     display: block;
     margin-bottom: 8px;
+    font-family: "Poppins", sans-serif;
 }
 
 input {
