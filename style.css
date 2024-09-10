@@ -43,6 +43,10 @@ tbody tr:hover {
     background-color: #ddd;
 }
 
+.invisivel {
+    display: none;
+}
+
 .action-buttons {
     display: flex;
     justify-content: center;
