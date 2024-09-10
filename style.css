@@ -26,6 +26,15 @@ h1 {
     font-weight: 650;
 }
 
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+}
+
 table {
     width: 80%;
     margin: 20px auto;
@@ -134,4 +143,8 @@ button[type="submit"], #cancelarCadastro {
 
 button[type="submit"]:hover, #cancelarCadastro:hover {
     background-color: #285aa8;
+}
+
+.info-empresa{
+    background-color: rgb(54, 122, 247);
 }
