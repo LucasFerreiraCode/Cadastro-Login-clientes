@@ -20,6 +20,19 @@ body, html {
     color: white;
 }
 
+.texto-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone-users {
+    width: 30px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    opacity: 0.5;
+}
+
 h1 {
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -117,6 +130,16 @@ button:hover {
     text-align: left;
 }
 
+.form-card-02 {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+}
+
 label {
     display: block;
     margin-bottom: 8px;
@@ -147,4 +170,12 @@ button[type="submit"]:hover, #cancelarCadastro:hover {
 
 .info-empresa{
     background-color: rgb(54, 122, 247);
+}
+
+.register-empresa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
 }

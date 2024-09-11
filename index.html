@@ -12,7 +12,8 @@
 <body>
 
     <div class="conteudo-principal">
-        <h1 class="texto-principal">Cadastro de Clientes</h1>
+        <h1 class="texto-principal">
+            <img src="./img/users-light.svg" alt="" class="icone-users"> Cadastro de Clientes</h1>
     </div>
     <section class="cadastro-01">  
         <button id="cadastrarClienteBtn" class="cadastro-02">Cadastrar Cliente</button>
@@ -62,8 +63,38 @@
     </section>
 
     <div class="info-empresa">
-       <h2>Informações da Empresa</h2>
+       <h2>Cadastrar Empresa</h2>
     </div>
+    <section class="cadastro-empresa">
+        <button id="cadastroEmpresaBtn" class="register-empresa">Cadastrar Empresa</button>
+    
+        <div id="formularioCadastroEmpresa" class="form-card-02" style="display: none;">
+            <form id="empresaForm">
+
+                <label for="nome">Nome da Empresa:</label>
+                <input type="text" id="nome" name="nome" required><br>
+
+                <label for="nome">Endereço:</label>
+                <input type="text" id="estado" name="nome" required><br>
+
+                <label for="nome">Estado:</label>
+                <input type="text" id="estado" name="nome" required><br>
+
+                <label for="CNPJ">CNPJ:</label>
+                <input type="text" id="CNPJ" name="CNPJ" required><br>
+    
+                <label for="CPF">CPF dos sócios:</label>
+                <input type="text" id="CPF" name="CPF" required><br>
+    
+                <label for="RG">RG:</label>
+                <input type="text" id="RG" name="RG" required><br>
+
+    
+                <button type="submit">Salvar</button>
+                <button type="button" id="cancelarCadastroEmpresa">Cancelar</button>
+            </form>
+        </div>
+    </section>
 
     <script src="./script.js"></script>
 </body>
