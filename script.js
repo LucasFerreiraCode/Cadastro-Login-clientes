@@ -81,18 +81,18 @@ document.getElementById('clienteForm').addEventListener('submit', function (even
     document.getElementById('formularioCadastro').style.display = 'none';
 });
 
-// Evento para exibir o formulário de empresa
+
 document.getElementById('cadastroEmpresaBtn').addEventListener('click', function () {
     document.getElementById('formularioCadastroEmpresa').style.display = 'block';
 });
 
-// Evento para cancelar o cadastro de empresa
+
 document.getElementById('cancelarCadastroEmpresa').addEventListener('click', function () {
     document.getElementById('formularioCadastroEmpresa').style.display = 'none';
     document.getElementById('empresaForm').reset();
 });
 
-// Lógica para salvar o cadastro de empresa (você pode adaptar conforme sua necessidade)
+
 document.getElementById('empresaForm').addEventListener('submit', function (event) {
     event.preventDefault();
     
@@ -100,10 +100,10 @@ document.getElementById('empresaForm').addEventListener('submit', function (even
     const cpf = document.getElementById('CPF').value;
     const rg = document.getElementById('RG').value;
     
-    // Aqui você pode adicionar a lógica de como armazenar essas informações na tabela, por exemplo
+
     console.log(`Empresa cadastrada: CNPJ=${cnpj}, CPF=${cpf}, RG=${rg}`);
     
-    // Resetar o formulário e ocultar
+
     document.getElementById('empresaForm').reset();
     document.getElementById('formularioCadastroEmpresa').style.display = 'none';
 });

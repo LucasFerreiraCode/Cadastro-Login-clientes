@@ -55,6 +55,30 @@ h2{
     opacity: 0.5;
 }
 
+.icone-cnpj {
+    border-radius: 10px;
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
+.icone-cpf {
+    border-radius: 10px;
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
+.icone-RG{
+    border-radius: 10px;
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
 table {
     width: 80%;
     margin: 20px auto;
@@ -151,6 +175,7 @@ label {
     display: block;
     margin-bottom: 8px;
     font-family: "Poppins", sans-serif;
+    font-weight: 400;
 }
 
 input {
