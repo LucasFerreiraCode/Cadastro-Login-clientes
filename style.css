@@ -48,6 +48,13 @@ h2{
     padding: 10px;
 }
 
+.icone-empresa {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
 table {
     width: 80%;
     margin: 20px auto;
