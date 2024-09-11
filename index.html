@@ -68,40 +68,55 @@
             Cadastrar Empresa
         </h2>
      </div>
-    <section class="cadastro-empresa">
+     <section class="cadastro-empresa">
         <button id="cadastroEmpresaBtn" class="register-empresa">Cadastrar Empresa</button>
     
         <div id="formularioCadastroEmpresa" class="form-card-02" style="display: none;">
+            <h2>Nova Empresa</h2>
             <form id="empresaForm">
-
-                <img src="./img/name-enterprise.svg" alt=""><label for="nome">Nome da Empresa:</label>
-                <input type="text" id="nome" name="nome" required><br>
-
-                <img src="./img/icone-mapa.svg" alt=""><label for="nome">Endereço:</label>
-                <input type="text" id="endereço" name="endereço" required><br>
-
-                <img src=".//img/icone-estado.svg" alt=""><label for="nome">Estado:</label>
+                <img src="./img/name-enterprise.svg" alt=""><label for="nomeEmpresa">Nome da Empresa:</label>
+                <input type="text" id="nomeEmpresa" name="nomeEmpresa" required><br>
+        
+                <img src="./img/icone-mapa.svg" alt=""><label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required><br>
+        
+                <img src="./img/icone-estado.svg" alt=""><label for="estado">Estado:</label>
                 <input type="text" id="estado" name="estado" required><br>
-
-                <img src="./img/icone-complemento.svg" alt=""><label for="nome">Complemento:</label>
+        
+                <img src="./img/icone-complemento.svg" alt=""><label for="complemento">Complemento:</label>
                 <input type="text" id="complemento" name="complemento" required><br>
-
-                <img src="./img/icone de cnpj.svg" alt="" class="icone-cnpj"><label for="CNPJ">CNPJ:</label>
-                <input type="text" id="CNPJ" name="CNPJ" required><br>
-                
-    
-                <img src="./img/icone-cpf.svg" alt="" class="icone-cpf"><label for="CPF">CPF sócio 1:</label>
-                <input type="text" id="CPF" name="CPF" required><br>CPF sócio 2:<input type="text" id="CPF" name="CPF" required><br>
-
-    
-                <img src="./img/icone-RG.svg" alt="" class="icone-RG"><label for="RG">RG do proprietário:</label>
-                <input type="text" id="RG" name="RG" required>
-    
+        
+                <img src="./img/icone de cnpj.svg" alt=""><label for="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" name="cnpj" required><br>
+        
+                <img src="./img/icone-cpf.svg" alt=""><label for="cpfSocios">CPF dos Sócios:</label>
+                <input type="text" id="cpfSocios" name="cpfSocios" required><br>
+        
+                <img src="./img/icone-RG.svg" alt=""><label for="rg">RG do Proprietário:</label>
+                <input type="text" id="rg" name="rg" required><br>
+        
                 <button type="submit">Salvar</button>
                 <button type="button" id="cancelarCadastroEmpresa">Cancelar</button>
             </form>
-        </div>
+        </div>        
+    
+        <table id="tabelaEmpresas">
+            <thead>
+                <tr>
+                    <th>Nome da Empresa</th>
+                    <th>Endereço</th>
+                    <th>Estado</th>
+                    <th>Complemento</th>
+                    <th>CNPJ</th>
+                    <th>CPF dos Sócios</th>
+                    <th>RG do Proprietário</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </section>
+    
 
     <script src="./script.js"></script>
 </body>
