@@ -13,7 +13,6 @@ document.getElementById('cancelarCadastro').addEventListener('click', function (
     linhaEditada = null;
 });
 
-// Adicionar ou Editar Cliente na Tabela
 function adicionarOuEditarClienteNaTabela(nome, email, celular, cidade) {
     if (linhaEditada) {
         linhaEditada.cells[0].textContent = nome;
@@ -94,14 +93,14 @@ document.getElementById('cancelarCadastroEmpresa').addEventListener('click', fun
 });
 
 // Adicionar ou Editar Empresa na Tabela
-function adicionarOuEditarEmpresaNaTabela(nomeEmpresa, endereco, estado, complemento, cnpj, cpf, rg) {
+function adicionarOuEditarEmpresaNaTabela(nomeEmpresa, endereco, estado, complemento, cnpj, cpfSocios, rg) {
     if (linhaEmpresaEditada) {
         linhaEmpresaEditada.cells[0].textContent = nomeEmpresa;
         linhaEmpresaEditada.cells[1].textContent = endereco;
         linhaEmpresaEditada.cells[2].textContent = estado;
         linhaEmpresaEditada.cells[3].textContent = complemento;
         linhaEmpresaEditada.cells[4].textContent = cnpj;
-        linhaEmpresaEditada.cells[5].textContent = cpf;
+        linhaEmpresaEditada.cells[5].textContent = cpfSocios;
         linhaEmpresaEditada.cells[6].textContent = rg;
         linhaEmpresaEditada = null;
     } else {
@@ -114,7 +113,7 @@ function adicionarOuEditarEmpresaNaTabela(nomeEmpresa, endereco, estado, complem
             <td>${estado}</td>
             <td>${complemento}</td>
             <td>${cnpj}</td>
-            <td>${cpf}</td>
+            <td>${cpfSocios}</td>
             <td>${rg}</td>
             <td class="action-buttons">
                 <button class="editar">Editar</button>
@@ -127,7 +126,7 @@ function adicionarOuEditarEmpresaNaTabela(nomeEmpresa, endereco, estado, complem
     }
 }
 
-// Editar Empresa
+
 function editarEmpresa(linha) {
     const nomeEmpresa = linha.cells[0].textContent;
     const endereco = linha.cells[1].textContent;
@@ -142,19 +141,24 @@ function editarEmpresa(linha) {
     document.getElementById('estado').value = estado;
     document.getElementById('complemento').value = complemento;
     document.getElementById('cnpj').value = cnpj;
-    document.getElementById('cpf').value = cpf;
+
+    // Aqui você insere o código corrigido
+    document.querySelectorAll('[name="cpfSocios"]').forEach((input, index) => {
+        input.value = cpf.split(', ')[index] || ''; // Supondo que você armazene múltiplos CPFs separados por vírgula
+    });
+
     document.getElementById('rg').value = rg;
 
     document.getElementById('formularioCadastroEmpresa').style.display = 'block';
     linhaEmpresaEditada = linha;
 }
 
+
 // Excluir Empresa
 function excluirEmpresa(linha) {
     linha.remove();
 }
 
-// Submeter o formulário de cadastro de empresa
 document.getElementById('empresaForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -163,10 +167,12 @@ document.getElementById('empresaForm').addEventListener('submit', function (even
     const estado = document.getElementById('estado').value;
     const complemento = document.getElementById('complemento').value;
     const cnpj = document.getElementById('cnpj').value;
-    const cpf = document.getElementById('cpf').value;
+    const cpfSocios = document.getElementById('cpfSocios').value;
     const rg = document.getElementById('rg').value;
 
-    adicionarOuEditarEmpresaNaTabela(nomeEmpresa, endereco, estado, complemento, cnpj, cpf, rg);
+    console.log(nomeEmpresa, endereco, estado, complemento, cnpj, cpfSocios, rg);  // Verifique se todos os valores estão corretos
+
+    adicionarOuEditarEmpresaNaTabela(nomeEmpresa, endereco, estado, complemento, cnpj, cpfSocios, rg);
 
     document.getElementById('empresaForm').reset();
     document.getElementById('formularioCadastroEmpresa').style.display = 'none';
