@@ -1,12 +1,12 @@
 let linhaEditada = null;
 
-// Mostrar o formulário de cadastro de cliente
+
 document.getElementById('cadastrarClienteBtn').addEventListener('click', function () {
     document.getElementById('formularioCadastro').style.display = 'block';
     linhaEditada = null;
 });
 
-// Cancelar o cadastro de cliente
+
 document.getElementById('cancelarCadastro').addEventListener('click', function () {
     document.getElementById('formularioCadastro').style.display = 'none';
     document.getElementById('clienteForm').reset();
@@ -40,7 +40,7 @@ function adicionarOuEditarClienteNaTabela(nome, email, celular, cidade) {
     }
 }
 
-// Editar Cliente
+
 function editarCliente(linha) {
     const nome = linha.cells[0].textContent;
     const email = linha.cells[1].textContent;
@@ -56,12 +56,12 @@ function editarCliente(linha) {
     linhaEditada = linha;
 }
 
-// Excluir Cliente
+
 function excluirCliente(linha) {
     linha.remove();
 }
 
-// Submeter o formulário de cadastro de cliente
+
 document.getElementById('clienteForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -76,23 +76,20 @@ document.getElementById('clienteForm').addEventListener('submit', function (even
     document.getElementById('formularioCadastro').style.display = 'none';
 });
 
-// Variáveis globais
+
 let linhaEmpresaEditada = null;
 
-// Mostrar o formulário de cadastro de empresa
 document.getElementById('cadastroEmpresaBtn').addEventListener('click', function () {
     document.getElementById('formularioCadastroEmpresa').style.display = 'block';
     linhaEmpresaEditada = null;
 });
 
-// Cancelar o cadastro de empresa
 document.getElementById('cancelarCadastroEmpresa').addEventListener('click', function () {
     document.getElementById('formularioCadastroEmpresa').style.display = 'none';
     document.getElementById('empresaForm').reset();
     linhaEmpresaEditada = null;
 });
 
-// Adicionar ou Editar Empresa na Tabela
 function adicionarOuEditarEmpresaNaTabela(nomeEmpresa, endereco, estado, complemento, cnpj, cpfSocios, rg) {
     if (linhaEmpresaEditada) {
         linhaEmpresaEditada.cells[0].textContent = nomeEmpresa;
@@ -142,9 +139,8 @@ function editarEmpresa(linha) {
     document.getElementById('complemento').value = complemento;
     document.getElementById('cnpj').value = cnpj;
 
-    // Aqui você insere o código corrigido
     document.querySelectorAll('[name="cpfSocios"]').forEach((input, index) => {
-        input.value = cpf.split(', ')[index] || ''; // Supondo que você armazene múltiplos CPFs separados por vírgula
+        input.value = cpf.split(', ')[index] || ''; 
     });
 
     document.getElementById('rg').value = rg;
@@ -154,7 +150,7 @@ function editarEmpresa(linha) {
 }
 
 
-// Excluir Empresa
+
 function excluirEmpresa(linha) {
     linha.remove();
 }

@@ -91,14 +91,12 @@ th, td {
     border-bottom: 1px solid #ddd;
     text-align: center;
     font-family: "Poppins", sans-serif;
-
 }
 
 th {
     background-color: #367AF7;
     color: white;
     text-align: center;
-    width: 50px;
 }
 
 tbody tr:nth-child(even) {
