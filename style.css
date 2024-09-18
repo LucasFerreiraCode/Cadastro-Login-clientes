@@ -7,7 +7,7 @@
 }
 
 body, html {
-    background-color: #f8f9fa;
+    background-color: #f7f9fc;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -27,13 +27,14 @@ body, html {
 }
 
 .icone-users {
-    width: 30px; /* Ajuste o tamanho conforme necessário */
+    width: 30px;
     height: auto;
-    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    margin-right: 10px;
     opacity: 0.5;
 }
 
 h1 {
+    color: #2c3e50;
     margin: 0;
     font-family: "Poppins", sans-serif;
     font-weight: 650;
@@ -43,7 +44,7 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #2c3e50;
     font-family: "Poppins", sans-serif;
     padding: 10px;
 }
