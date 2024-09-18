@@ -166,7 +166,7 @@ document.getElementById('empresaForm').addEventListener('submit', function (even
     const cpfSocios = document.getElementById('cpfSocios').value;
     const rg = document.getElementById('rg').value;
 
-    console.log(nomeEmpresa, endereco, estado, complemento, cnpj, cpfSocios, rg);  // Verifique se todos os valores estão corretos
+    console.log(nomeEmpresa, endereco, estado, complemento, cnpj, cpfSocios, rg);
 
     adicionarOuEditarEmpresaNaTabela(nomeEmpresa, endereco, estado, complemento, cnpj, cpfSocios, rg);
 
